@@ -2,8 +2,8 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "deploy": "cp -R static/* ../priv/static/ && parcel build js/app.js --out-dir ../priv/static/js --public-url /js --no-cache",
+    "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js --out-dir ../priv/static/js --public-url /js"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
@@ -13,12 +13,7 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.0",
-    "copy-webpack-plugin": "^4.5.0",
-    "css-loader": "^2.1.1",
-    "mini-css-extract-plugin": "^0.4.0",
-    "optimize-css-assets-webpack-plugin": "^4.0.0",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "4.4.0",
-    "webpack-cli": "^2.0.10"
+    "parcel": "^1.12.3",
+    "parcel-plugin-stdin": "^0.1.1"
   }
 }
