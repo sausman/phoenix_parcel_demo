@@ -1,3 +1,5 @@
+Sample code from [this blog post](https://www.dwolla.com/updates/webpack-to-parcel/)
+
 # PhoenixParcelDemo
 
 To start your Phoenix server:
